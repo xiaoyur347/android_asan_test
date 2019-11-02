@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.tbruyelle.rxpermissions2.RxPermissions
 import kotlinx.android.synthetic.main.activity_scrolling.*
+import kotlinx.android.synthetic.main.content_scrolling.*
 import java.io.File
 
 class ScrollingActivity : AppCompatActivity() {
@@ -33,6 +34,9 @@ class ScrollingActivity : AppCompatActivity() {
     }
 
     private fun setListener() {
+        btn_heap_use_after_free.setOnClickListener{
+            NativeHelper.HeapUseAfterFree()
+        }
         fab.setOnClickListener { view ->
             // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
             //    .setAction("Action", null).show()
