@@ -7,16 +7,11 @@ import shutil
 import sys
 
 
-def get_platform():
-    if platform.system() == "Darwin":
-        return "darwin"
-
-
 class NdkPath:
     def __init__(self):
         self.__lib_path = ""
         ndk = os.environ["ANDROID_NDK_HOME"]
-        ndk += "/toolchains/llvm/prebuilt/{}-x86_64".format(get_platform())
+        ndk += "/toolchains/llvm/prebuilt/{}-x86_64".format(platform.system().lower())
 
         with open(ndk + "/AndroidVersion.txt", "r") as f:
             version = f.readline()
