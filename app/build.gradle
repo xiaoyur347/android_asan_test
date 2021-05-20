@@ -28,8 +28,8 @@ android {
 
     sourceSets {
         main {
-            resources.srcDirs += 'asan/r15c'
-            jniLibs.srcDirs += 'asan/r15c/lib'
+            resources.srcDirs += 'asan/r21d'
+            jniLibs.srcDirs += 'asan/r21d/lib'
         }
     }
     externalNativeBuild {
